@@ -1,0 +1,25 @@
+body {
+  font-family: "Roboto", sans-serif;
+  color: #31326f;
+  background-image: linear-gradient(to top, #cfd9df 0%, #e2ebf0 100%);
+}
+
+.appBody {
+  display: block;
+}
+h1,
+h2 {
+  text-align: center;
+}
+
+.see-more {
+  background-color: #31326f;
+  color: white;
+}
+.share-button {
+  background-color: #31326f;
+  color: white;
+}
+i {
+  font-size: 40px;
+}
