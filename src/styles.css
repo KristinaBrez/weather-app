@@ -6,6 +6,7 @@ body {
 
 .appBody {
   display: block;
+  background-image: linear-gradient(to top, #cfd9df 0%, #e2ebf0 100%);
 }
 h1,
 h2 {
@@ -22,4 +23,8 @@ h2 {
 }
 i {
   font-size: 40px;
+}
+.link-to-github {
+  color: #31326f;
+  font-size: xx-small;
 }
