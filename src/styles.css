@@ -1,11 +1,15 @@
 body {
   font-family: "Roboto", sans-serif;
   color: #31326f;
-  background-image: linear-gradient(to top, #cfd9df 0%, #e2ebf0 100%);
+  display: block;
+  margin: 0 auto;
 }
-
+i {
+  text-align: center;
+}
 .appBody {
   display: block;
+  margin: 0 auto;
   background-image: linear-gradient(to top, #cfd9df 0%, #e2ebf0 100%);
 }
 h1,
@@ -27,4 +31,5 @@ i {
 .link-to-github {
   color: #31326f;
   font-size: xx-small;
+  text-align: center;
 }
