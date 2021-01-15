@@ -18,52 +18,44 @@
 
 <body>
     <div class="container">
-        <div class="card appBody" style="width: 35rem;">
-            <div class="card-body">
-                <div class="row">
-                    <div class="col-4">
+        <div class="weather-app">              
                         <form id="search-form">
                             <input type="text" placeholder="Search for a city" id="searched-city" autocomplete:"off";
                                 autofocus:"on" />
                             <input type="submit" value="Search" id="search-city-input" />
                         </form>
-                    </div>
-                </div>
                 <button type="button" class="btn btn-light share-button mt-2" id="current-location">Current
                     Location</i></button>
                 <h1>Stuttgart</h1>
                 <h2>Date</h2>
-                <i class="fas fa-cloud"></i>
-            </div>
+                
             <div class="row">
-                <div class="col-3"></div>
-                <div class="col-3">
-                    <div class="card" style="width: 9rem;">
-                        <div class="card-body">
-                            <h6 class="card-subtitle mb-2 text-muted">mostly cloudy</h6>
-                            <p class="card-text">
-                            <h3><span id="temp">7</span>
-                                <a href="#" id=degree-in-celsius>°C</a>|
-                                <a href="#" id=degree-in-fahrenheit>°F</a>
-                            </h3>
-                            </p>
-                        </div>
-                    </div>
-                </div>
                 <div class="col-6">
-                    <div class="card" style="width: 10rem;">
-                        <div class="card-body">
-                            <p class="card-text">
-                                <span id="humidity">Humidity: 84 %</span></br><span id="wind">Wind: 5 km/h</span>
-                            </p>
-                        </div>
-                    </div>
+<i class="fas fa-cloud-moon"></i>
+
+<h6>mostly cloudy</h6>
+<h3><span id="temp">7</span>
+    <a href="#" id=degree-in-celsius>°C</a>|
+    <a href="#" id=degree-in-fahrenheit>°F</a>
+</h3>
+                </div>
+                
+                <div class="col-6">
+                    <ul>
+                        <li>
+<span id="humidity">Humidity: 84 %</span>
+                        </li>
+                        <li>
+<span id="wind">Wind: 5 km/h</span>
+                        </li>
+                    </ul>
                 </div>
             </div>
-        </div>
     </div>
     <div class="link-to-github">
-        <a href="https://github.com/KristinaBrez/weather-app.git">Open source code</a> by Kristina Brezonic
+       <small> <a href="https://github.com/KristinaBrez/weather-app.git" target="_blank">Open-source code</a> by Kristina Brezonic
+    </small>
+</div>
     </div>
     </div>
     <script src="src/index.js">
