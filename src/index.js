@@ -24,8 +24,8 @@ function formatDate(date) {
   let announceDate = `${currentDay}, ${currentHours}:${displayMinutes()}`;
   return announceDate;
 }
-let h2 = document.querySelector("h2");
-h2.innerHTML = formatDate();
+let liDate = document.querySelector("#date");
+liDate.innerHTML = formatDate();
 
 //Homework 5 - search engine
 let searchedCity = document.querySelector("#searched-city");
@@ -46,8 +46,8 @@ function showTempInCity(response) {
   let temperature = Math.round(response.data.main.temp);
   let humidity = response.data.main.humidity;
   let wind = response.data.wind.speed;
-  let h3 = document.querySelector("h3");
-  h3.innerHTML = `${temperature}`;
+  let strong = document.querySelector("strong");
+  strong.innerHTML = `${temperature}°C|°F`;
   let humidityElement = document.querySelector("#humidity");
   humidityElement.innerHTML = `Humidity: ${humidity}%`;
   let windElement = document.querySelector("#wind");
