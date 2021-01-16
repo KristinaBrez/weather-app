@@ -27,7 +27,7 @@ function formatDate(date) {
 let liDate = document.querySelector("#date");
 liDate.innerHTML = formatDate();
 
-//Homework 5 - search engine
+
 let searchedCity = document.querySelector("#searched-city");
 
 function searchCity(event) {
