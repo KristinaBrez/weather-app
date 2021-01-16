@@ -47,11 +47,11 @@ function showTempInCity(response) {
   let humidity = response.data.main.humidity;
   let wind = response.data.wind.speed;
   let strong = document.querySelector("strong");
-  strong.innerHTML = `${temperature}°C|°F`;
+  strong.innerHTML = `${temperature}`;
   let humidityElement = document.querySelector("#humidity");
-  humidityElement.innerHTML = `Humidity: ${humidity}%`;
+  humidityElement.innerHTML = ` ${humidity}`;
   let windElement = document.querySelector("#wind");
-  windElement.innerHTML = `Wind: ${wind} km/h`;
+  windElement.innerHTML = ` ${wind}`;
   let h6 = document.querySelector("h6");
   let description = response.data.weather[0].description;
   console.log(description);

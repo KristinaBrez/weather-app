@@ -6,14 +6,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Weather App 🌤</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet"
-        integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous" />
-    <script src="https://kit.fontawesome.com/4663ec863f.js" crossorigin="anonymous"></script>
-    <link rel="stylesheet" href="src/styles.css">
+        integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous"> <script src="https://kit.fontawesome.com/4663ec863f.js" crossorigin="anonymous"></script>
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Amatic+SC:wght@400;700&family=Playfair+Display+SC&display=swap"
         rel="stylesheet">
     <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
-
+    <link rel="stylesheet" href="src/styles.css">
 </head>
 
 <body>
@@ -31,9 +29,9 @@
                     <li id="date">
                         Date
                     </li>
-                    <li id="describe-weather">
+                    <li class="describe" id="describe-weather">
                         <h6>
-                    mostly cloudy
+                    Mostly cloudy
                         </h6>
                     </li>
                 </ul>
@@ -41,24 +39,20 @@
                 
             <div class="row">
                 <div class="col-6">
-                    <div class="clearfix">
-                        <img src="file:///C:/Users/krist/Downloads/undraw_Raining_re_4b55.svg" class="rainy float-left"/>
-                        <div class="float-left">
-                            <strong id="temp">7
-                                <span class="degrees"><a href="#" id=degree-in-celsius>°C</a>|<a href="#" id=degree-in-fahrenheit>°F</a>
-                                </span>
-                            </strong>
-                        </div>
-                    </div>
+                    <img src="file:///C:/Users/krist/Downloads/undraw_Weather_app_re_kcb1%20(1).svg" alt="rainy" class="rainy">
+                        <strong id="temp">2
+                        </strong>
+                            <span class="degrees"><a href="#" id=degree-in-celsius>°C</a>|<a href="#" id=degree-in-fahrenheit>°F</a>
+                            </span>
                 </div>
             
                 <div class="col-6">
                     <ul>
                         <li>
-                            <span id="humidity">Humidity: 84 %</span>
+                            Humidity:<span id="humidity"></span> %
                         </li>
                         <li>
-                            <span id="wind">Wind: 5 km/h</span>
+                            Wind:<span id="wind"></span> km/h
                         </li>
                     </ul>
                 </div>
@@ -70,8 +64,12 @@
 </div>
     </div>
     </div>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-ygbV9kiqUc6oa4msXn9868pTtWMgiQaeYH7/t7LECLbyPA2x65Kgf80OJFdroafW"
+        crossorigin="anonymous"></script>
     <script src="src/index.js">
     </script>
+
 </body>
 
 </html>
