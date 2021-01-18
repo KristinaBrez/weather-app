@@ -56,11 +56,12 @@ function showTempInCity(response) {
   let description = response.data.weather[0].description;
   console.log(description);
   h6.innerHTML = `${description}`;
+  let iconElement=document.querySelector("#icon");
+  iconElement.setAttribute("src")=`http://openweathermap.org/img/wn/04d@2x.png`;
 }
 let searchForm = document.querySelector("#search-form");
 searchForm.addEventListener("submit", searchCity);
 
-//Bonus Point - current location
 function showTemperatureAndCity(response) {
   let temperatureEl = Math.round(response.data.main.temp);
   console.log(temperatureEl);
