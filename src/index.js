@@ -1,4 +1,3 @@
-//Feature 1 - current day and time
 function formatDate(date) {
   let currentTime = new Date();
   let currentHours = currentTime.getHours();
@@ -24,16 +23,16 @@ function formatDate(date) {
   let announceDate = `${currentDay}, ${currentHours}:${displayMinutes()}`;
   return announceDate;
 }
-let liDate = document.querySelector("#date");
-liDate.innerHTML = formatDate();
+let dateElement = document.querySelector("#date");
+dateElement.innerHTML = formatDate();
 
 
 let searchedCity = document.querySelector("#searched-city");
 
 function searchCity(event) {
   event.preventDefault();
-  let heading = document.querySelector("h1");
-  heading.innerHTML = `${searchedCity.value}`;
+  let h1 = document.querySelector("h1");
+  h1.innerHTML = `${searchedCity.value}`;
   let cityOfInterest = searchedCity.value;
   let apiKey = "83af440fa20a143bbf52e11211e7bfb3";
   let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${cityOfInterest}&appid=83af440fa20a143bbf52e11211e7bfb3&units=metric`;
@@ -84,3 +83,4 @@ function showPosition(position) {
 }
 let currentLocation = document.querySelector("#current-location");
 currentLocation.addEventListener("click", showPosition);
+

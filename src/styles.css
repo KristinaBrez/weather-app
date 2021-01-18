@@ -15,6 +15,7 @@ i {
   padding: 20px;
   border: 1px solid grey;
   border-radius: 5px;
+  border-color: #f9fafb;
   background-image: linear-gradient(to top, #cfd9df 0%, #e2ebf0 100%);
 }
 ul {
@@ -42,8 +43,10 @@ strong {
 }
 .share-button {
   background-color: #31326f;
+  border-color: #31326f;
   color: white;
 }
+
 i {
   font-size: 40px;
 }
@@ -66,4 +69,15 @@ i {
   position: relative;
   font-size: 16px;
   top: -32px;
+}
+.btn-primary {
+  background-color: #31326f;
+  color: white;
+  border-color: #31326f;
+}
+.btn-primary:hover {
+  background-color: #f9fafb;
+  border-color: #f9fafb;
+  color: #31326f;
+  transition: ease-in-out;
 }
