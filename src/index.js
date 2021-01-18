@@ -45,7 +45,7 @@ function showTempInCity(response) {
   console.log(response.data.main.temp);
   let temperature = Math.round(response.data.main.temp);
   let humidity = response.data.main.humidity;
-  let wind = response.data.wind.speed;
+  let wind = Math.round(response.data.wind.speed);
   let strong = document.querySelector("strong");
   strong.innerHTML = `${temperature}`;
   let humidityElement = document.querySelector("#humidity");
