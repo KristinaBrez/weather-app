@@ -35,14 +35,12 @@ function searchCity(event) {
   let heading = document.querySelector("h1");
   heading.innerHTML = `${searchedCity.value}`;
   let cityOfInterest = searchedCity.value;
-  console.log(cityOfInterest);
   let apiKey = "83af440fa20a143bbf52e11211e7bfb3";
   let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${cityOfInterest}&appid=83af440fa20a143bbf52e11211e7bfb3&units=metric`;
   axios.get(`${apiUrl}&q=${cityOfInterest}`).then(showTempInCity);
 }
 
 function showTempInCity(response) {
-  console.log(response.data.main.temp);
   let temperature = Math.round(response.data.main.temp);
   let humidity = response.data.main.humidity;
   let wind = Math.round(response.data.wind.speed);
@@ -57,14 +55,16 @@ function showTempInCity(response) {
   console.log(description);
   h6.innerHTML = `${description}`;
   let iconElement=document.querySelector("#icon");
-  iconElement.setAttribute("src")=`http://openweathermap.org/img/wn/04d@2x.png`;
+  let iconImage=response.data.weather[0].icon;
+  iconElement.setAttribute("src",`http://openweathermap.org/img/wn/${iconImage}@2x.png`);
+  iconElement.setAttribute("alt", response.data.weather[0].description);
 }
+
 let searchForm = document.querySelector("#search-form");
 searchForm.addEventListener("submit", searchCity);
 
 function showTemperatureAndCity(response) {
   let temperatureEl = Math.round(response.data.main.temp);
-  console.log(temperatureEl);
   let h1 = document.querySelector("h1");
   h1.innerHTML = `${response.data.name}`;
   let h3 = document.querySelector("h3");
