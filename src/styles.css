@@ -81,3 +81,11 @@ i {
   color: #31326f;
   transition: ease-in-out;
 }
+.active {
+  color: #31326f;
+  cursor: default;
+  text-decoration: none;
+}
+.active:hover {
+  text-decoration: none;
+}
