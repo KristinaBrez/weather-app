@@ -31,12 +31,14 @@ h1,
 h2 {
   margin-bottom: 0;
 }
-strong {
+i {
+  font-size: 40px;
+}
+.current-temperature {
   font-weight: 400;
   font-size: 64px;
   line-height: 1;
 }
-
 .see-more {
   background-color: #31326f;
   color: white;
@@ -45,10 +47,6 @@ strong {
   background-color: #31326f;
   border-color: #31326f;
   color: white;
-}
-
-i {
-  font-size: 40px;
 }
 .describe ::first-letter {
   text-transform: uppercase;
@@ -88,4 +86,31 @@ i {
 }
 .active:hover {
   text-decoration: none;
+}
+.weather-forecast {
+  margin-top: 10px;
+}
+.weather-forecast h3 {
+  color: #31326f;
+  font-size: 14px;
+  font-weight: 400;
+  text-align: center;
+  height: 15px;
+  line-height: 15px;
+  padding-top: 7px;
+}
+.weather-forecast img {
+  display: block;
+  margin: 0 auto;
+  height: 48px;
+  width: 48px;
+}
+.weather-forecast-temp {
+  text-align: center;
+  color: #31326f;
+  font-size: 13px;
+  font-weight: 400;
+  height: auto;
+  line-height: 15px;
+  white-space: nowrap;
 }

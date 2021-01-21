@@ -26,8 +26,47 @@ function formatDate(date) {
 let dateElement = document.querySelector("#date");
 dateElement.innerHTML = formatDate();
 
+function formatHours(timestamp){
+  
+  let date=new Date(timestamp);
+  let hours=date.getHours();
+  if(hours<10){
+    hours=`0${hours}`;
+  }
+  let minutes=date.getMinutes();
+  if (minutes<10){
+    minutes=`0${minutes}`;
+  }
+  return `${hours}:${minutes}`;
+}
 
 let searchedCity = document.querySelector("#searched-city");
+
+function displayForecast(response){
+  let forecastElement = document.querySelector("#forecast");
+  forecastElement.innerHTML=null;
+  let forecast = null;
+
+  for (let index = 0; index < 6; index++) {
+  forecast = response.data.list[index];
+  forecastElement.innerHTML+=`
+    <div class="col-2">
+        <h3>
+            ${formatHours(forecast.dt*1000)}
+        </h3>
+        <img 
+            src="http://openweathermap.org/img/wn/${forecast.weather[0].icon}@2x.png" alt=""
+        />
+        <div class="weather-forecast-temp">
+            <strong>
+                ${Math.round(forecast.main.temp_max)}°
+            </strong>
+               ${Math.round(forecast.main.temp_min)}°
+         </div>
+    </div>`; 
+  }  
+    
+}
 
 function searchCity(event) {
   event.preventDefault();
@@ -37,6 +76,8 @@ function searchCity(event) {
   let apiKey = "83af440fa20a143bbf52e11211e7bfb3";
   let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${cityOfInterest}&appid=83af440fa20a143bbf52e11211e7bfb3&units=metric`;
   axios.get(`${apiUrl}&q=${cityOfInterest}`).then(showTempInCity);
+  apiUrl=`https://api.openweathermap.org/data/2.5/forecast?q=${cityOfInterest}&appid=83af440fa20a143bbf52e11211e7bfb3&units=metric`;
+  axios.get(apiUrl).then(displayForecast);
 }
 
 function showTempInCity(response) {
@@ -79,7 +120,7 @@ function getCoordinates(position) {
   axios
     .get(`${apiUrl}&appid=${apiKey}&lat=${lat}&lon=${lon}`)
     .then(showTemperatureAndCity);
-}
+  }
 function showPosition(position) {
   navigator.geolocation.getCurrentPosition(getCoordinates);
 }
