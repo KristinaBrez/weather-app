@@ -4,20 +4,6 @@ body {
   display: block;
   margin: 0 auto;
 }
-
-i {
-  text-align: center;
-}
-.weather-app {
-  max-width: 600px;
-  display: block;
-  margin: 30px auto;
-  padding: 20px;
-  border: 1px solid grey;
-  border-radius: 5px;
-  border-color: #f9fafb;
-  background-image: linear-gradient(to top, #cfd9df 0%, #e2ebf0 100%);
-}
 ul {
   margin: 0;
   padding: 0;
@@ -31,22 +17,24 @@ h1,
 h2 {
   margin-bottom: 0;
 }
-i {
-  font-size: 40px;
+
+.weather-app {
+  max-width: 600px;
+  display: block;
+  margin: 30px auto;
+  padding: 20px;
+  border: 1px solid grey;
+  border-radius: 5px;
+  border-color: #f9fafb;
+  background-image: linear-gradient(to top, #cfd9df 0%, #e2ebf0 100%);
 }
 .current-temperature {
   font-weight: 400;
   font-size: 64px;
   line-height: 1;
 }
-.see-more {
-  background-color: #31326f;
-  color: white;
-}
-.location-button {
-  background-color: #31326f;
-  border-color: #31326f;
-  color: white;
+.emoji {
+  max-width: 20px;
 }
 .describe ::first-letter {
   text-transform: uppercase;
@@ -69,14 +57,14 @@ i {
   top: -32px;
 }
 .btn-primary {
-  background-color: #31326f;
+  background-color: #ec6e4c;
   color: white;
-  border-color: #31326f;
+  border-color: #ec6e4c;
 }
 .btn-primary:hover {
   background-color: #f9fafb;
   border-color: #f9fafb;
-  color: #31326f;
+  color: #ec6e4c;
   transition: ease-in-out;
 }
 .active {
